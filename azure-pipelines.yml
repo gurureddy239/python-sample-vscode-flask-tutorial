@@ -4,12 +4,3 @@ jobs:
     name: Linux
     vmImage: 'ubuntu-latest'
 
-- template: npm-with-params.yml  # Template reference
-  parameters:
-    name: macOS
-    vmImage: 'macOS-latest'
-
-- template: npm-with-params.yml  # Template reference
-  parameters:
-    name: Windows
-    vmImage: 'windows-latest'
