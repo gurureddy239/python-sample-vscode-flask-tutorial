@@ -1,7 +1,15 @@
 jobs:
-- job: myJob
-  timeoutInMinutes: 10
-  pool:
+- template: templates/npm-with-params.yml  # Template reference
+  parameters:
+    name: Linux
     vmImage: 'ubuntu-latest'
-  steps:
-  - bash: echo "Hello world"
+
+- template: templates/npm-with-params.yml  # Template reference
+  parameters:
+    name: macOS
+    vmImage: 'macOS-latest'
+
+- template: templates/npm-with-params.yml  # Template reference
+  parameters:
+    name: Windows
+    vmImage: 'windows-latest'
